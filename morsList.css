@@ -1247,4 +1247,8 @@ h2.nova {
 
 .mui-col-sm-6 {
     padding: 0px;
+}a.mui-btn.mui-btn-default.editThis.mui-btn-raised {
+    margin-top: 32px!important;
+    display: block;
+    color: #C34B1E!important;
 }
