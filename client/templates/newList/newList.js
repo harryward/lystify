@@ -22,6 +22,7 @@ Template.newList.events({
         })
         formObj['featuredImage'] = Session.get('featuredImage').res;
         formObj['status'] = Session.get('featuredImage').draft;
+        formObj['created'] = new Date()
         console.log(formObj)
         ListPosts.insert(formObj)
         thisList = ListPosts.findOne(formObj)
