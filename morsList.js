@@ -41,19 +41,14 @@ JsonRoutes.add("get", "/api/lists", function (req, res, next) {
   JsonRoutes.sendResult(res, 200, ListPosts.find().fetch());
 });
 
+JsonRoutes.add("get", "/api/slides", function (req, res, next) {
+  // var id = req.params.id;
+
+  JsonRoutes.sendResult(res, 200, Slides.find().fetch());
+});
+
   Meteor.startup(function () {
-      GAkey = GoogleKeys.findOne({'active':'true'})
-      if(GAkey){
-          TheKey = GAkey
-          GAkey = TheKey.key
-      }
-      METEOR_SETTINGS  = {
-          "public": {
-              "ga": {
-                  "id": GAkey || "UA-23373718-2"
-              }
-          }
-      }
+
     // code to run on server at startup
   });
 }
