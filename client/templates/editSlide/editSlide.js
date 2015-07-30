@@ -1,6 +1,6 @@
 Template.editSlide.onCreated(function(){
     savePic = function(pic){
-        Slides.update({_id:Session.get('params').theId}, {$set:{
+        Slides.update({_id:Session.get('params').theid}, {$set:{
             featuredImage:pic.url
         }});
 
@@ -8,7 +8,7 @@ Template.editSlide.onCreated(function(){
 })
 Template.editSlide.helpers({
     slide:function(){
-        return Slides.findOne(Session.get('params').theId)
+        return Slides.findOne(Session.get('params').theid)
     }
 })
 
@@ -30,7 +30,7 @@ Template.editSlide.events({
             }
         })
         console.log('form Object',formObj)
-        Slides.update({'_id':Session.get('params').theId},{
+        Slides.update({'_id':Session.get('params').theid},{
             $set:formObj
         })
         window.history.back()
