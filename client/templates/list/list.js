@@ -23,9 +23,7 @@ Template.list.events({
     "click .embedKit":function(){
         $('.embedkit').toggle()
     },
-    "click .editThis":function(){
 
-    },
     "click .lister":function(){
         SlideId = this._id
         Slides.update({'_id':SlideId},{$set:{'number':prompt('enter number')}})
