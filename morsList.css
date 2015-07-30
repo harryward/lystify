@@ -1244,7 +1244,7 @@ h2.nova {
 }.teasercard img {
     width: 100%;
 }
-iframe {
-    max-width: 94%;
 
+.mui-col-sm-6 {
+    padding: 0px;
 }
