@@ -1210,3 +1210,35 @@ stretchRight
     margin-top: 1px;
     padding: 6%;
 }
+.mui-container.main.nav h2 {
+    background-color: #000;
+    padding: 16px;
+    position: fixed;
+    left: 0px;
+    top: -20px;
+    width: 100%;
+    z-index: 333;
+    color: #FFF;
+}.bottomnav.mui-container {
+    margin-top: 97px;
+}a.navlink.mui-pull-right {
+    position: fixed;
+    top: 22px;
+    color: #FFF!important;
+    z-index: 333333333434343434343;
+    right: 25px;
+}
+h2.nova {
+    padding-bottom: 7px!important;
+}
+.mui-container.main.nav h2 {
+    background-color: #000;
+    padding: 16px;
+    position: fixed;
+    left: 0px;
+    top: -20px;
+    width: 100%;
+    z-index: 333;
+    color: #E5FF9F;
+    padding-bottom: 14px!important;
+}
