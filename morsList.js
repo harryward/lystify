@@ -40,11 +40,17 @@ JsonRoutes.add("get", "/api/lists", function (req, res, next) {
 
   JsonRoutes.sendResult(res, 200, ListPosts.find().fetch());
 });
+
   Meteor.startup(function () {
+      GAkey = GoogleKeys.findOne({'active':'true'})
+      if(GAkey){
+          TheKey = GAkey
+          GAkey = TheKey.key
+      }
       METEOR_SETTINGS  = {
           "public": {
               "ga": {
-                  "id": GoogleKeys.findOne({'active':'true'}).key || "UA-23373718-2"
+                  "id": GAkey || "UA-23373718-2"
               }
           }
       }

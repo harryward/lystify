@@ -1,7 +1,8 @@
 
 Router.route('/', {
   'template':'home',
-  'title':'LISTIFY - BY HARRY WARD'
+  'title':'LISTIFY - BY HARRY WARD',
+  trackPageView:true,
 });
 Router.route('/p/:template', {
     title: function(){
@@ -14,6 +15,7 @@ Router.route('/p/:template', {
     }
 
     },
+    trackPageView:true,
      data: function(){
 
         theId = this.params.query.id
@@ -24,7 +26,6 @@ Router.route('/p/:template', {
         $('.bottom-googlead').html('<ins class="adsbygoogle" style="display:inline-block;width:100%;height:60px" data-ad-client="ca-pub-8837201084231310" data-ad-slot="1371200856"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>')
         return theTemp
     },
-    trackPageView:true,
     template:function(){
         if(theTemp){
             return theTemp
