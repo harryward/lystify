@@ -1204,3 +1204,9 @@ stretchRight
     text-transform: uppercase;
     font-weight: lighter;
 }
+.jumboheader h2.nova {
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-top: 1px;
+    padding: 6%;
+}
