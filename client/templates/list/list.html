@@ -1,8 +1,11 @@
 <template name="list">
+
     {{>nav}}
     <div class="mui-container listview">
+        <h2 class="nova mui-text-headline mui-text-center">Preview</h2>
+<iframe frameborder="none" scrolling="no" src="/p/listMod?id={{thisList._id}}&slide={{slideCount}}&prod=true" width="100%" height="1000px"></iframe>
     <div class="jumboheader mui-text-center" >
-    <h2 style="cursor:pointer" class="nova">{{thisList.title}} <hr><a class=" mui-btn mui-btn-primary mui-btn-lg mui-btn-raised nova" href="/p/listMod?id={{thisList._id}}&slide={{slideCount}}&prod=true" target="_blank">Preview</a> <a class="embedKit mui-btn mui-btn-default mui-btn-lg mui-btn-raised nova" href="#" >Embed</a></h2>
+    <h2 style="cursor:pointer" class="nova">{{thisList.title}} <hr><a class=" mui-btn mui-btn-primary mui-btn-lg mui-btn-raised nova" href="/p/listMod?id={{thisList._id}}&slide={{slideCount}}&prod=true" target="_blank">Pop-Out Preview</a> <a class="embedKit mui-btn mui-btn-default mui-btn-lg mui-btn-raised nova" href="#" >Embed Kit</a></h2>
     <div class="mui-text-center">
     <div class="mui-text-body2 nova">Pageviews</div>
 <div class="statnum mui-text-headline nova">    <i class="fa fa-bar-chart"></i>  {{pageViews.pageviews}}</div>
@@ -78,7 +81,7 @@
     <div class="mui-row">
         <div class="mui-col-sm-3"></div>
         <div class="mui-col-sm-6">
-            <p class="nova mui-text-subhead">Slides </p>
+            <p class="nova mui-text-headline mui-text-center">Slides </p>
 <div class="mui-row">
             {{#each slides}}
 <div class="mui-col-sm-12 singler">
@@ -105,8 +108,7 @@
         </div>
 
         </div>
-        <h2 class="nova mui-text-headline mui-text-center">Preview</h2>
-<iframe frameborder="none" scrolling="no" src="/p/listMod?id={{thisList._id}}&slide={{slideCount}}&prod=true" width="100%" height="1600px"></iframe>
+
 
     </div>
 </template>
