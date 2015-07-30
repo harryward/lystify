@@ -13,6 +13,10 @@
     <div class="mui-row">
     <div class="mui-col-sm-12">
     <div class="mui-text-headline nova">DRAFT Lists</div>
+        {{#if drafts}}
+        {{else}}
+        <div class="mui-text-caption"><i>No Drafts</i></div>
+        {{/if}}
         {{#each drafts}}
 
         {{#if featuredImage}}
@@ -30,7 +34,7 @@
         <p class="mui-text-center"><a class="mui-btn mui-btn-primary" href="#" onclick="ListPosts.update({'_id':'{{_id}}'},{$set:{'status':'live'}})"> Publish <i class="fa fa-arrow-right"></i></a>
         </p>
         <p class="text-center">
-            <a href="/p/editPromo?id={{_id}}"  class="mui-text-danger">Edit</a>
+            <a href="/p/editPromo?id={{_id}}"  class="mui-text-danger">Edit</a>s
 </p>
         </div>
         </div>
@@ -49,6 +53,10 @@
 <div class="mui-row">
 <div class="mui-col-sm-12">
 <div class="mui-text-headline nova">LIVE Lists</div>
+{{#if published}}
+{{else}}
+<div class="mui-text-caption"><i>No Live Lists Yet...</i></div>
+{{/if}}
 {{#each published}}
 
 {{#if featuredImage}}
