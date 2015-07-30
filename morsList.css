@@ -1241,4 +1241,6 @@ h2.nova {
     z-index: 333;
     color: #E5FF9F;
     padding-bottom: 14px!important;
+}.teasercard img {
+    width: 100%;
 }
