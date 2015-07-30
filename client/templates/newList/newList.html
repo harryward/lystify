@@ -1,0 +1,29 @@
+<template name="newList">
+<div class="newlist-container">
+
+
+<form class="newList">
+<div class="mui-form-group">
+<label>Title</label>
+<input class="nova mui-form-control" name="title">
+</div>
+
+<div class="mui-form-group">
+<label>Teaser</label>
+<textarea class="nova mui-form-control" name="teaser"></textarea>
+</div>
+
+<div class="mui-form-group">
+<label>Featured Image</label>
+<input class="nova" type="file" >
+<p>
+    <br>
+<img src="{{featuredImage.res.url}}">
+</p>
+</div>
+
+<button type="submit" class="mui-btn mui-btn-primary">Create List</button>
+
+</form>
+</div>
+</template>

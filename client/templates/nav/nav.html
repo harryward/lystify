@@ -1,0 +1,26 @@
+<template name="nav">
+<div class="mui-container main nav">
+<h2 style="cursor:pointer" onclick="Router.go('/')" class="nova">LYSTIFY <small class="mui-text-caption">by Harry Ward</small> </h2>
+
+
+</div>
+<div class="bottomnav mui-container">
+
+    <p class="nova login">
+    <a class="navlink mui-pull-right" href="/">My Lists</a>
+    <a class="navlink mui-pull-right" href="/p/analytics">Google Analytics</a>
+        {{>loginButtons}}
+    </p>
+</div>
+<style>
+a.navlink.mui-pull-right {
+    text-transform: uppercase;
+    margin-left: 20px;
+    color: #000;
+}.bottomnav.mui-container {
+    border-bottom: solid 1px #D3D3D3;
+    margin-bottom: 15px;
+    padding-bottom: 41px;
+}
+</style>
+</template>

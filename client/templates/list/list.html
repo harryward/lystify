@@ -1,0 +1,112 @@
+<template name="list">
+    {{>nav}}
+    <div class="mui-container listview">
+    <div class="jumboheader mui-text-center" >
+    <h2 style="cursor:pointer" class="nova">{{thisList.title}} <hr><a class=" mui-btn mui-btn-primary mui-btn-lg mui-btn-raised nova" href="/p/listMod?id={{thisList._id}}&slide={{slideCount}}&prod=true" target="_blank">Preview</a> <a class="embedKit mui-btn mui-btn-default mui-btn-lg mui-btn-raised nova" href="#" >Embed</a></h2>
+    <div class="mui-text-center">
+    <div class="mui-text-body2 nova">Pageviews</div>
+<div class="statnum mui-text-headline nova">    <i class="fa fa-bar-chart"></i>  {{pageViews.pageviews}}</div>
+    </div>
+</div>
+    <div class="mui-row">
+
+    <div class="mui-col-sm-3 mui-text-center">
+
+    </div>
+    <div class="mui-col-sm-6">
+        <div class="embedkit" style="display:none;">
+                <h3>Embed Kit <a class="embedKit mui-pull-right nova" href="#" >Close</a></h3>
+                <div class="mui-panel nova">
+                    <p class="mui-panel">
+                    Copy and paste this code into a page or post on your website.
+                    </p>
+                <label class="nova">Embed Code</label>
+                <textarea style="height:300px;background:black;padding:10px;color:#fff;" onclick="$(this).select()" class="mui-form-control"><div class="well">{{thisList.teaser}}</div><iframe width="100%" height="1600px" scrolling="no" frameborder="none" src="http://montanaoutdoorlist.meteor.com/p/listMod?id={{thisList._id}}&slide={{slideCount}}&prod=true"></iframe><style>img.attachment-large.wp-post-image,.content h2, .btn-danger {display: none;}</style></textarea>
+            <hr>
+            <div class="mui-panel mui-text-center">
+            <h2>Wordpress</h2>
+            <img src="/demo.png">
+        </div>
+                </div>
+                </div>
+
+    <h3>Add Slide</h3>
+
+    <div class="mui-panel">
+
+    <form class="newSlide">
+    <input type="hidden" name="parent" value="{{thisList._id}}">
+
+    <div class="mui-form-group">
+    <label>Title</label>
+    <input name="title" class="mui-form-control nova">
+    </div>
+
+    <div class="mui-form-group">
+    <label>Number</label>
+    <select name="number" class="nova">
+        <option value="{{totalSlides}}">{{totalSlides}}</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+    </select>
+    </div>
+
+    <div class="mui-form-group">
+    <label class="nova">Image</label>
+    <input type="file" class="nova mui-form-control">
+    <img src="{{myPic.res.url}}">
+    <input type="hidden" name="featuredImage" value="{{myPic.res.url}}">
+    </div>
+
+    <div class="mui-form-group">
+    <label class="nova">Description</label>
+    <textarea onclick="$(this).select()" name="description" class="mui-form-control"></textarea>
+    </div>
+    <button class="nova mui-btn mui-btn-primary mui-btn-raised" type="submit">Publish Slide</button>
+    </form>
+</div>
+
+    </div>
+
+    </div>
+
+    <div class="mui-row">
+        <div class="mui-col-sm-3"></div>
+        <div class="mui-col-sm-6">
+            <p class="nova mui-text-subhead">Slides </p>
+<div class="mui-row">
+            {{#each slides}}
+<div class="mui-col-sm-12 singler">
+    <div class="img-container">
+        <img style="width:100%" src="{{featuredImage}}">
+    </div>
+        <div class="mui-panel">
+            <div><b>#{{number}}</b> {{title}} </div>
+            <div class="mui-teaser mui-text-caption">
+            {{description}}
+            </div>
+
+
+            <!-- <p class="nova">{{description}}</p> -->
+            <a href="/p/editSlide?id={{_id}}" class="mui-btn mui-btn-default  editThis mui-btn-raised" style="color:red;margin-top:10px">Edit</a>
+
+
+
+        </div>
+        </div>
+            {{/each}}
+
+        </div>
+        </div>
+
+        </div>
+        <h2 class="nova mui-text-headline mui-text-center">Preview</h2>
+<iframe frameborder="none" scrolling="no" src="/p/listMod?id={{thisList._id}}&slide={{slideCount}}&prod=true" width="100%" height="1600px"></iframe>
+
+    </div>
+</template>

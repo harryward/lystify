@@ -1,0 +1,184 @@
+<template name="listMod">
+<style>
+h2.nova{
+    display:none;
+}
+</style>
+    <div class="nova mui-container">
+
+        <div class="list-container">
+
+            {{#if loading}}
+            <div class="mui-row">
+            <div class="mui-col-sm-3"></div>
+            <div class="loader mui-col-sm-6 mui-text-center">
+            <div class="loadingtop">
+            </div>
+            <div class="loadingbottom">
+            <p class="loader nova">LOADING...</p>
+            </div>
+            </div>
+            </div>
+            {{else}}
+            {{#if slideCheck}}
+
+
+
+            <div class="mui-row">
+
+            <div class="mui-col-sm-3"></div>
+            <div class="mui-col-sm-6 mui-text-center">
+                {{>mobilead}}
+                <div class="control-container">
+                <h1 class="mui-text-headline nova">{{thisList.title}}</h1>
+                {{#if thisList.teaser}}
+                <div class="mui-teaser">
+                <p class="mui-text-caption nova">{{thisList.teaser}}</p>
+                </div>
+                {{/if}}
+
+
+            </div>
+
+            </div>
+            </div>
+            <div class="mui-row bigEntrance">
+                <div class="mui-col-sm-3">
+                </div>
+                <div class="mui-col-sm-6">
+                    <img src="{{theSlide.featuredImage}}" style="width:100%" class="featuredImage">
+
+                    <div class="mui-panel thepan">
+                        <div class="mui-row">
+                        <div class="mui-col-xs-2 mui-text-center"><div class="mui-text-headline">#{{theSlide.number}}</div></div>
+                        <div class="mui-col-xs-9">
+                            <div class="mui-text-headline slide-title"> {{theSlide.title}}</div>
+                            <p class="nova desc">{{theSlide.description}}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="mui-row ">
+                        <div class="mui-col-xs-6 mui-text-left">
+                        <div class="control-buttons mui-text-left">
+                            {{#if prevSlide}}<div class="mui-btn mui-btn-primary prevSlide mui-btn-raised nova"> #{{prevSlide}} <i class="fa fa-caret-left"></i>  Prev </div> {{else}}<a href="/p/listMod?id=34343&slide=1000&prod=true" class="mui-btn mui-btn-default  mui-btn-raised nova">More</a> {{/if}}
+                        </div>
+                        </div>
+
+                        <div class="mui-col-xs-6 mui-text-right">
+                        {{#if nextSlide}}<div class="mui-btn mui-btn-primary nextSlide mui-btn-raised nova">Next <i class="fa fa-caret-right"></i>  #{{nextSlide}}</div>{{else}}<a href="/p/listMod?id=34343&slide=1000&prod=true" class="mui-btn mui-btn-default  mui-btn-raised nova">More</a> {{/if}}
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mui-col-sm-3">
+                </div>
+                <div class="mui-col-sm-6">
+
+
+
+                    <!-- <div class="mui-text-center">
+                        <div id='div-gpt-ad-1438189544118-0' style='height:250px; width:100%;'>
+                            <script type='text/javascript'>
+                                googletag.cmd.push(function() {
+                                    googletag.display('div-gpt-ad-1438189544118-0');
+                                });
+                            </script>
+                        </div>
+                    </div> -->
+                </div>
+
+
+
+
+            </div>
+
+
+        {{else}}
+        <div class="bigEntrance mui-more">
+
+        <div class="mui-row">
+            <div class="mui-col-sm-3">
+            </div>
+            <div class="mui-col-sm-6">
+<h1 class="mui-text-headline mui-text-center nova">You Might Also Like</h1>
+<div class="mui-panel">
+
+        {{#each moreLists}}
+
+        {{#if featuredImage}}
+
+        <div style="position:relative;margin-bottom:10px" class=" teasercard mui-col-sm-12">
+            <div class="mui-panel">
+            <a href="#" onclick="window.location.href='/p/listMod?id={{_id}}&slide={{slideCountMore}}{{#if production}}&prod=true{{/if}}'">    <img src="{{featuredImage.url}}"></a>
+
+                <div class="mui-text-subhead mui-text-black awesome-title nova"><a href="#" onclick="window.location.href='/p/listMod?id={{_id}}&slide={{slideCountMore}}{{#if production}}&prod=true{{/if}}'" class="mui-text-headline nova more-title">{{title}}</a></div>
+                <p class="mui-text-caption nova">{{teaser}}</p>
+
+        </div>
+        </div>
+
+
+
+        {{/if}}
+        {{/each}}
+        </div>
+        <br>
+        </div>
+        </div>
+        </div>
+
+        {{/if}}
+        <div class="mui-row">
+        <div class="mui-col-sm-3">
+        </div>
+        <div class="mui-col-sm-6">
+<div class="bottomad">
+{{>bottomad}}
+</div>
+
+        </div>
+        </div>
+{{/if}}
+</div>
+<div class="mui-text-center">
+    <br>
+<i class="fa fa-bar-chart"></i>
+<div class="statnum mui-text-headline nova">{{pageViews.pageviews}}</div>
+</div>
+
+    </div>
+<style>
+.mui-text-subhead.listtitle.nova a{
+    color:#fff;
+}
+.mui-text-subhead.listtitle.nova {
+    text-transform: uppercase;
+    padding: 13px;
+    background-color: #000;
+    line-height: 1;
+    margin-bottom: 10px;
+    margin: -15px;
+    margin-bottom: 16px;
+    color: #FFF;
+}.mui-text-headline.morelists.mui-text-white {
+    margin-bottom: 14px;
+    margin-top: -6px;
+}h1.mui-text-headline.nova {
+    font-weight: lighter;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 3em;
+    color: #5D5D5D;
+}p.mui-text-caption.nova {
+    background-color: #FFF;
+    padding: 10px;
+    margin-top: -22px;
+    font-size: 14px;
+}
+</style>
+<script>
+
+
+
+</script>
+</template>

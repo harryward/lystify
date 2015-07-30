@@ -1,0 +1,69 @@
+<template name="analytics">
+{{>nav}}
+<div class="mui-container">
+<div class="mui-col-sm-3"></div>
+<div class="mui-col-sm-6">
+<h1 class="mui-text-headline nova">Google Analytics</h1>
+<p class="mui-text-caption">
+This tool uses 'active' Google Analytics Key to track pageviews.
+</p>
+<br>
+{{#if activeOne}}
+<div class="mui-panel">
+
+<div class="mui-text-subhead nova activeid">
+<form class="analyticsForm">
+    <div class="mui-text-headline nova">Edit Key</div>
+<div class="mui-form-group">
+<label>Site</label>
+<input name="site" value="{{activeOne.site}}" class="mui-form-control">
+</div>
+<div class="mui-form-group">
+<label>Google Analytics UID (ex: UA-23373718-2)</label>
+<input name="key" value="{{activeOne.key}}" class="mui-form-control">
+</div>
+
+<div class="mui-form-group">
+<label>Active (true or false)</label>
+<input name="active" value="{{activeOne.active}}" class="mui-form-control">
+</div>
+<button type="submit" class="mui-btn mui-btn-primary mui-btn-raised">Save</button>
+</form>
+</div>
+</div>
+{{else}}
+<div class="mui-panel">
+<form class="newAnalytics">
+    <div class="mui-text-headline nova">New Key</div>
+<div class="mui-form-group">
+<label>Site</label>
+<input placeholder="yourdomain.com" name="site" value="{{activeOne.site}}" class="mui-form-control">
+</div>
+<div class="mui-form-group">
+<label>Google Analytics UID (ex: UA-23373718-2)</label>
+<input name="key" placeholder="UA-23373718-2" value="{{activeOne.key}}" class="mui-form-control">
+</div>
+
+<div class="mui-form-group">
+<label>Active (true or false)</label>
+<input placeholder="false" name="active" value="{{activeOne.active}}" class="mui-form-control">
+</div>
+<button type="submit" class="mui-btn mui-btn-primary mui-btn-raised">Save</button>
+</form>
+</div>
+{{/if}}
+{{#each keys}}
+<div class="mui-panel">
+
+<p>
+    <div class="site nova mui-text-subhead">Site: {{site}}</div>
+    Key: {{key}}<br>
+    Active: {{active}}</p>
+    <a class="text-danger" style="color:red" href="#" onclick="Session.set('analyticsId','{{_id}}')">Edit</a>
+</div>
+<hr>
+{{/each}}
+</div>
+</div>
+
+</template>

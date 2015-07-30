@@ -1,0 +1,31 @@
+<template name="editPromo">
+    {{>nav}}
+<div class="mui-container">
+<div class="mui-row">
+    <div class="mui-col-sm-3"></div>
+        <div class="mui-col-sm-6">
+<form class="editPromoForm">
+<h2 class="nova">Edit Promo</h2>
+
+<div class="mui-form-group">
+<label>Title</label>
+<input name="title" value="{{slide.title}}" class="mui-form-control">
+</div>
+
+<div class="mui-form-group">
+<label>Teaser</label>
+<textarea name="teaser" class="mui-form-control">{{slide.teaser}}</textarea>
+</div>
+
+
+<div class="mui-form-group">
+<label>Image</label>
+<input  value="{{slide.featuredImage}}" class="mui-form-control" type="file">
+<img width="300px" src="{{slide.featuredImage.url}}">
+</div>
+<button class="mui-btn mui-btn-primary" type="submit">Save</button>
+</form>
+</div>
+</div>
+</div>
+</template>
