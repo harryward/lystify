@@ -2,6 +2,8 @@ Template.listMod.onCreated(function(){
 
     Session.set('loading',true)
     setTimeout(function(){
+    $('.loader').addClass('fadeOut')
+    $('.megarow').addClass('fadeIn')
     Session.set('loading',false)
 
 }, 2000);
@@ -48,6 +50,7 @@ Template.listMod.helpers({
          }
      },
     nextSlide: function(){
+
         if(Slides.findOne(Slides.findOne({'parent':Session.get('params').id,'number':(parseInt(Session.get('params').slide)-1).toString()},{sort:{number:-1}}))){
             if(Session.get('params').slide=== '1'){
 return parseInt(Session.get('params').slide)
@@ -81,6 +84,10 @@ return parseInt(Session.get('params').slide)-1
 
 Template.listMod.events({
     "click .nextSlide": function(event, template){
+
+        $('.megarow').attr('style','visibility:hidden')
+        $('.megarow').attr('class','megarow mui-row fadeIn')
+
          trackPageview();
          Router.go('/p/listMod?id='+Session.get('params').id+'&slide='+(parseInt(Session.get('params').slide)-1))
         if(Session.get('params').prod){
@@ -116,6 +123,9 @@ Template.listMod.events({
 
 },
 "click .prevSlide": function(event, template){
+    $('.megarow').attr('style','visibility:hidden')
+    $('.megarow').attr('class','megarow mui-row fadeIn')
+    // $('.megarow').addClass("fadeIn")
     trackPageview()
     //  trackPageview(); Router.go('/p/listMod?id='+Session.get('params').id+'&slide='+(parseInt(Session.get('params').slide)-1))
     if(Session.get('params').prod){
