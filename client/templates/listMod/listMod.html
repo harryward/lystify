@@ -42,7 +42,7 @@ h2.nova{
 
             </div>
             </div>
-            <div class="mui-row megarow" style="visibility:hidden">
+            <div class="mui-row megarow fadeIn">
                 <div class="mui-col-sm-3">
                 </div>
                 <div class="mui-col-sm-6">
@@ -94,20 +94,20 @@ h2.nova{
 
 
         {{else}}
-        <div class="fadeIn mui-more">
+        <div class=" mui-more">
 
         <div class="mui-row">
             <div class="mui-col-sm-3">
             </div>
             <div class="mui-col-sm-6">
 <h1 class="mui-text-headline mui-text-center nova">You Might Also Like</h1>
-<div class="mui-panel">
+<div class="mui-man">
 
         {{#each moreLists}}
 
         {{#if featuredImage}}
 
-        <div style="position:relative;margin-bottom:10px" class=" teasercard mui-col-sm-12">
+        <div style="position:relative;margin-bottom:10px"  class=" teasercard mui-col-sm-12">
             <div class="mui-panel">
             <a href="#" onclick="window.location.href='/p/listMod?id={{_id}}&slide={{slideCountMore}}{{#if production}}&prod=true{{/if}}'">    <img src="{{featuredImage.url}}"></a>
 
@@ -140,12 +140,13 @@ h2.nova{
         </div>
 {{/if}}
 </div>
+{{#if thisList}}
 <div class="mui-text-center">
     <br>
 <i class="fa fa-bar-chart"></i>
 <div class="statnum mui-text-headline nova">{{pageViews.pageviews}}</div>
 </div>
-
+{{/if}}
     </div>
 <style>
 .mui-text-subhead.listtitle.nova a{
@@ -174,13 +175,16 @@ h2.nova{
     padding: 10px;
     margin-top: -22px;
     font-size: 14px;
+}h1.mui-text-headline.nova {
+    font-weight: lighter;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 2em;
+
 }
 </style>
 <script>
-setTimeout(function(){
-    $('.megarow').addClass('expandUp')
 
-}, 2400);
 </script>
 <script>
 

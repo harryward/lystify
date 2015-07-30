@@ -85,8 +85,7 @@ return parseInt(Session.get('params').slide)-1
 Template.listMod.events({
     "click .nextSlide": function(event, template){
 
-        $('.megarow').attr('style','visibility:hidden')
-        $('.megarow').attr('class','megarow mui-row fadeIn')
+
 
          trackPageview();
          Router.go('/p/listMod?id='+Session.get('params').id+'&slide='+(parseInt(Session.get('params').slide)-1))
@@ -123,8 +122,7 @@ Template.listMod.events({
 
 },
 "click .prevSlide": function(event, template){
-    $('.megarow').attr('style','visibility:hidden')
-    $('.megarow').attr('class','megarow mui-row fadeIn')
+
     // $('.megarow').addClass("fadeIn")
     trackPageview()
     //  trackPageview(); Router.go('/p/listMod?id='+Session.get('params').id+'&slide='+(parseInt(Session.get('params').slide)-1))
