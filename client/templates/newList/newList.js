@@ -22,11 +22,14 @@ Template.newList.events({
         })
         formObj['featuredImage'] = Session.get('featuredImage').res;
         formObj['status'] = 'draft';
+        formObj['user'] = Meteor.user();
         formObj['created'] = new Date()
         console.log(formObj)
         ListPosts.insert(formObj)
         thisList = ListPosts.findOne(formObj)
         console.log(thisList)
+        $('.newList input,.newList textarea').val('')
+        Session.set('featuredImage',null)
 
     }
 });
