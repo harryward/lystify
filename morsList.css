@@ -1268,4 +1268,10 @@ p.nova.login {
     left: 11%;
 }div#login-dropdown-list a {
     color: #808080;
+}p.nova.login {
+    position: fixed;
+    top: 4px;
+    z-index: 333434;
+    top: 21px;
+    left: 150px;
 }
