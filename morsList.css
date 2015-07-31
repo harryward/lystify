@@ -1251,4 +1251,7 @@ h2.nova {
     margin-top: 32px!important;
     display: block;
     color: #C34B1E!important;
+}a.mui-btn.mui-btn-default.editThis.mui-btn-raised {
+    text-align: left;
+    box-shadow: none;
 }
