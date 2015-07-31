@@ -7,7 +7,7 @@
 <div class="bottomnav mui-container">
 
     <p class="nova login">
-    <a class="navlink mui-pull-right" href="/">My Lists</a>
+    {{#if currentUser}}<a class="navlink mui-pull-right" href="/">My Lists</a>{{/if}}
         {{>loginButtons}}
     </p>
 </div>
