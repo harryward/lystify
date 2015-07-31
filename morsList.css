@@ -1318,4 +1318,7 @@ display:none!important;
     position: fixed;
     top: 50px;
     left: 5px;
+    width:100%;
+    padding:20%;
+    padding-top:1px;
 }
