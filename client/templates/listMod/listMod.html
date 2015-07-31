@@ -146,9 +146,14 @@ h2.nova{
     <br>
 <i class="fa fa-bar-chart"></i>
 <div class="statnum mui-text-headline nova">{{pageViews.pageviews}}</div>
+{{#if currentUser}}
+<hr>
+<a href="/p/list?id={{thislist._id}}">Edit</a>
+{{/if}}
 </div>
 {{/if}}
     </div>
+
 <style>
 .mui-text-subhead.listtitle.nova a{
     color:#fff;
