@@ -34,7 +34,7 @@ Template.listMod.helpers({
         return  Slides.find({'parent':this._id},{sort:{number:-1}}).count()
     },
     moreLists:function(){
-     return ListPosts.find({'_id':{$nin:[Session.get('params').id]},status:'live'},{limit:2}).fetch()
+     return ListPosts.find({'_id':{$nin:[Session.get('params').id]},status:'live'},{sort:{created:-1},limit:2}).fetch()
      },
      slideCheck :function(){
          if(Session.get('params').slide === '1'){
