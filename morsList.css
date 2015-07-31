@@ -1266,4 +1266,6 @@ p.nova.login {
     z-index: 333434;
     top: 21px;
     left: 11%;
+}div#login-dropdown-list a {
+    color: #808080;
 }
