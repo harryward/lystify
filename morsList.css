@@ -1254,4 +1254,16 @@ h2.nova {
 }a.mui-btn.mui-btn-default.editThis.mui-btn-raised {
     text-align: left;
     box-shadow: none;
+}p.nova.login a {
+    color: #FFF;
+    text-decoration: none!important;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+p.nova.login {
+    position: fixed;
+    top: 4px;
+    z-index: 333434;
+    top: 21px;
+    left: 11%;
 }
