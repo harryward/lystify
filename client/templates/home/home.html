@@ -32,11 +32,13 @@
         <div class="mui-text-body2 nova">Pageviews</div>
         <div class="statnum mui-text-headline nova">    <i class="fa fa-bar-chart"></i>  {{pageviews.pageviews}}</div>
         </div>
-        <p class="mui-text-center"><a class="mui-btn mui-btn-primary" href="#" onclick="ListPosts.update({'_id':'{{_id}}'},{$set:{'status':'live'}})"> Publish <i class="fa fa-arrow-right"></i></a>
-        </p>
+
+        <hr>
         <p class="text-center">
-            <a href="/p/editPromo?id={{_id}}"  class="mui-text-danger">Edit</a>
-</p>
+            <a href="/p/editPromo?id={{_id}}"  class="mui-btn mui-btn-default mui-btn-raised mui-pull-left mui-text-danger">Edit</a>
+            <a class="mui-btn-success mui-btn mui-pull-right mui-btn-raised" href="#" onclick="ListPosts.update({'_id':'{{_id}}'},{$set:{'status':'live'}})">Activate <i class="fa fa-arrow-right"></i></a>
+
+        </p>
         </div>
         </div>
     </div>
@@ -78,10 +80,11 @@
 <div class="statnum mui-text-headline nova">    <i class="fa fa-bar-chart"></i>  {{pageviews.pageviews}}</div>
 </div>
 
-<p class="mui-text-center"><a class="mui-btn-danger mui-btn" href="#" onclick="ListPosts.update({'_id':'{{_id}}'},{$set:{'status':'draft'}})"><i class="fa fa-arrow-left"></i> DeActivate</a>
-</p>
+<hr>
 <p class="text-center">
-    <a href="/p/editPromo?id={{_id}}"  class="mui-text-danger">Edit</a>
+    <a href="/p/editPromo?id={{_id}}"  class="mui-btn mui-btn-default mui-btn-raised mui-pull-left mui-text-danger">Edit</a>
+    <a class="mui-btn-deactivate mui-btn-raised mui-btn mui-pull-right" href="#" onclick="ListPosts.update({'_id':'{{_id}}'},{$set:{'status':'draft'}})"><i class="fa fa-arrow-left"></i> DeActivate</a>
+
 </p>
 </div>
 </div>
