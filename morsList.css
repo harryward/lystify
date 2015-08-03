@@ -1323,4 +1323,21 @@ display:none!important;
     padding-top:1px;
 }.mui-panel a {
     text-decoration: none!important;
+}.loadingtop {
+    padding: 57px;
+    background-color: #1B1B1B;
+    margin-top: 21px;
+}.loadingbottom {
+    height: 600px;
+    background-color: #151414;
+    padding: 103px;
+    color: #5E5D5D;
+}.mui-more a.mui-text-headline.nova.more-title {
+    font-weight: inherit;
+    font-size: 2em;
+    margin-top: 0px;
+    /*color: #FFF;*/
+}.mui-text-headline.slide-title {
+    /*color: #FFF;*/
+    font-weight: normal;
 }
