@@ -69,12 +69,12 @@ h2.nova{
                     <div class="mui-row ">
                         <div class="mui-col-xs-6 mui-text-left">
                         <div class="control-buttons mui-text-left">
-                            {{#if prevSlide}}<div class="mui-btn mui-btn-primary prevSlide mui-btn-raised nova"> #{{prevSlide}} <i class="fa fa-caret-left"></i>  Prev </div> {{else}}<a href="/p/gallery?id=34343&slide=1000&prod=true" class="mui-btn mui-btn-default  mui-btn-raised nova">More</a> {{/if}}
+                            {{#if prevSlide}}<div class="mui-btn mui-btn-primary prevSlide mui-btn-raised nova"> #{{prevSlide}} <i class="fa fa-caret-left"></i>  Prev </div> {{else}}<a href="/p/gallery?id={{theSlide.parent}}&slide=1000&prod=true" class="mui-btn mui-btn-default  mui-btn-raised nova">More</a> {{/if}}
                         </div>
                         </div>
 
                         <div class="mui-col-xs-6 mui-text-right">
-                        {{#if nextSlide}}<div class="mui-btn mui-btn-primary nextSlide mui-btn-raised nova">Next <i class="fa fa-caret-right"></i>  #{{nextSlide}}</div>{{else}}<a href="/p/gallery?id=34343&slide=1000&prod=true" class="mui-btn mui-btn-default  mui-btn-raised nova">More</a> {{/if}}
+                        {{#if nextSlide}}<div class="mui-btn mui-btn-primary nextSlide mui-btn-raised nova">Next <i class="fa fa-caret-right"></i>  #{{nextSlide}}</div>{{else}}<a href="/p/gallery?id={{theSlide.parent}}&slide=1000&prod=true" class="mui-btn mui-btn-default  mui-btn-raised nova">More</a> {{/if}}
 
                         </div>
 
@@ -257,6 +257,8 @@ h2.nova{
     margin: 10px;
     margin-top: -1px;
     height: 309px;
+}.bottom-googlead {
+    margin-bottom: 50px;
 }
 
 </style>
