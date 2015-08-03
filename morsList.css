@@ -1341,3 +1341,8 @@ display:none!important;
     /*color: #FFF;*/
     font-weight: normal;
 }
+a.mui-text-headline {
+    text-transform: uppercase;
+    font-weight: lighter;
+    line-height: 1;
+}
