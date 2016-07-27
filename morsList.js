@@ -2,8 +2,15 @@ if (Meteor.isClient) {
     // counter starts at 0
     Session.setDefault('counter', 0);
     trackPageview = function() {
+      var theId = Session.get('params').id
+        ga('send', {
+            hitType: 'pageview',
+            page: Session.get('params').id,
+            title:ListPosts.findOne(Session.get('params').id).title
+        });
+        //ga('send', 'pageview');
 
-        if (Analytics.findOne(theId)) {
+        if (Analytics.findOne()) {
             console.log('has analtyics object')
             console.log('theId', theId)
             var theNum = 0

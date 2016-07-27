@@ -1,36 +1,36 @@
 <template name="home">
 {{#if currentUser}}
 {{>nav}}
-    <div class="mui-container-fluid">
-        <div class="mui-row">
-            <div class="mui-col-sm-3">
-                <div class="mui-text-headline active nova">New List</div>
-                <div class="mui-panel">
+    <div class=" container">
+        <div class=" row">
+            <div class=" col-sm-3">
+                <div class=" text-headline active nova">New List</div>
+                <div class=" panel">
             {{>newList}}
             </div></div>
 
-<div class="mui-col-sm-9">
+<div class=" col-sm-9">
 
 
-    <h1 class="mui-text-headline nova">Published</h1>
-    <div class="mui-card">
+    <h1 class=" text-headline nova">Published</h1>
+    <div class=" card">
     {{#each published}}
     {{#if featuredImage}}
-    <div class="mui-row">
-    <div class="mui-col-sm-2">
+    <div class=" row">
+    <div class=" col-sm-2">
         <a href="/p/list?id={{_id}}">    <img style="width:100%" src="{{featuredImage.url}}"></a>
 
     </div>
-    <div class="mui-col-sm-6">
-    <div class="mui-text-body2"><a class="mui-text-headline" href="/p/list?id={{_id}}">{{title}}</a></div>
+    <div class=" col-sm-6">
+    <div class=" text-body2"><a class=" text-headline" href="/p/list?id={{_id}}">{{title}}</a></div>
 
-    <div class="mui-text-body1">{{teaser}}</div>
+    <div class=" text-body1">{{teaser}}</div>
     </div>
-    <div class="mui-col-sm-4 mui-text-right">
-        <div class="mui-text-right"><i class="fa fa-bar-chart"></i>  {{pageviews.pageviews}} </div>
+    <div class=" col-sm-4  text-right">
+        <div class=" text-right"><i class="fa fa-bar-chart"></i>  {{pageviews.pageviews}} </div>
         <hr>
-        <a href="/p/editPromo?id={{_id}}"  class="mui-btn mui-btn-default mui-btn-raised  mui-text-danger">Edit</a>
-        <a class="mui-btn-deactivate mui-btn-raised mui-btn " href="#" onclick="ListPosts.update({'_id':'{{_id}}'},{$set:{'status':'draft'}})"><i class="fa fa-arrow-down"></i> DeActivate</a>
+        <a href="/p/editPromo?id={{_id}}"  class=" btn  btn-default  btn-raised   text-danger">Edit</a>
+        <a class=" btn-deactivate  btn-raised  btn " href="#" onclick="ListPosts.update({'_id':'{{_id}}'},{$set:{'status':'draft'}})"><i class="fa fa-arrow-down"></i> DeActivate</a>
     </div>
 
     </div>
@@ -40,24 +40,24 @@
     </div>
 
 
-<h1 class="mui-text-headline nova">Drafts</h1>
-<div class="mui-card">
+<h1 class=" text-headline nova">Drafts</h1>
+<div class=" card">
 {{#each drafts}}
 {{#if featuredImage}}
-<div class="mui-row">
-<div class="mui-col-sm-2">
+<div class=" row">
+<div class=" col-sm-2">
     <a href="/p/list?id={{_id}}">    <img style="width:100%" src="{{featuredImage.url}}"></a>
 
 </div>
-<div class="mui-col-sm-6">
-<div class="mui-text-body2"><a class="mui-text-headline" href="/p/list?id={{_id}}">{{title}}</a></div>
-<div class="mui-text-caption">{{teaser}}</div>
+<div class=" col-sm-6">
+<div class=" text-body2"><a class=" text-headline" href="/p/list?id={{_id}}">{{title}}</a></div>
+<div class=" text-caption">{{teaser}}</div>
 </div>
-<div class="mui-col-sm-4 mui-text-right">
-    <div class="mui-text-right"><i class="fa fa-bar-chart"></i>  {{pageviews.pageviews}} </div>
+<div class=" col-sm-4  text-right">
+    <div class=" text-right"><i class="fa fa-bar-chart"></i>  {{pageviews.pageviews}} </div>
     <hr>
-    <a href="/p/editPromo?id={{_id}}"  class="mui-btn mui-btn-default mui-btn-raised mui-text-danger">Edit</a>
-    <a class="mui-btn-success mui-btn mui-btn-raised" href="#" onclick="ListPosts.update({'_id':'{{_id}}'},{$set:{'status':'live'}})">Activate <i class="fa fa-arrow-up"></i></a>
+    <a href="/p/editPromo?id={{_id}}"  class=" btn  btn-default  btn-raised  text-danger">Edit</a>
+    <a class=" btn-success  btn  btn-raised" href="#" onclick="ListPosts.update({'_id':'{{_id}}'},{$set:{'status':'live'}})">Activate <i class="fa fa-arrow-up"></i></a>
 </div>
 </div>
 {{/if}}

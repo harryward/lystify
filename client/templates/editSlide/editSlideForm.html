@@ -1,33 +1,33 @@
 <template name="editSlide">
     {{>nav}}
-<div class="mui-container">
-<div class="mui-row">
-    <div class="mui-col-sm-3"></div>
-        <div class="mui-col-sm-6">
+<div class=" container">
+<div class=" row">
+    <div class=" col-sm-3"></div>
+        <div class=" col-sm-6">
 <form class="editSlideForm">
 <h2 class="nova">Edit Slide</h2>
 
-<div class="mui-form-group">
+<div class=" form-group">
 <label>Title</label>
-<input name="title" value="{{slide.title}}" class="mui-form-control">
+<input name="title" value="{{slide.title}}" class=" form-control">
 </div>
 
-<div class="mui-form-group">
+<div class=" form-group">
 <label>Description</label>
-<textarea name="teaser"  class="mui-form-control">{{slide.description}}</textarea>
+<textarea name="teaser"  class=" form-control">{{slide.description}}</textarea>
 </div>
 
-<div class="mui-form-group">
+<div class=" form-group">
 <label>Number</label>
-<input  name="number" value="{{slide.number}}" class="mui-form-control">
+<input  name="number" value="{{slide.number}}" class=" form-control">
 </div>
 
-<div class="mui-form-group">
+<div class=" form-group">
 <label>Image</label>
-<input  value="{{slide.featuredImage}}" class="mui-form-control" type="file">
+<input  value="{{slide.featuredImage}}" class=" form-control" type="file">
 <img width="300px" src="{{slide.featuredImage}}">
 </div>
-<button class="mui-btn mui-btn-primary" type="submit">Save</button>
+<button class=" btn  btn-primary" type="submit">Save</button>
 </form>
 </div>
 </div>

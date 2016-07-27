@@ -4,21 +4,21 @@ h2.nova{
     display:none;
 }
 </style>
-    <div class="nova mui-container-fluid">
+    <div class="nova  container-fluid">
 
         <div class="list-container">
 
             {{#if loading}}
-            <div class="mui-row">
+            <div class=" row">
 
-            <div class="loader mui-col-sm-12 mui-text-center">
+            <div class="loader  col-sm-12  text-center">
 
-            <div class="mui-col-sm-7">
+            <div class=" col-sm-7">
             <div class="loadingbottom">
             <p class="loader nova">LOADING...</p>
         </div>
             </div>
-            <div class="mui-col-sm-5">
+            <div class=" col-sm-5">
             <div class="loadingtop">
             </div>
         </div>
@@ -29,16 +29,16 @@ h2.nova{
 
 
 
-            <div class="mui-row">
+            <div class=" row">
 
-            <div class="mui-col-sm-3"></div>
-            <div class="mui-col-sm-12 mui-text-left">
+            <div class=" col-sm-3"></div>
+            <div class=" col-sm-12  text-left">
                 {{>mobilead}}
                 <div class="control-container">
-                <!-- <h1 class="mui-text-headline nova" style="color:#fff">{{thisList.title}}</h1> -->
+                <!-- <h1 class=" text-headline nova" style="color:#fff">{{thisList.title}}</h1> -->
                 {{#if thisList.teaser}}
-                <div class="mui-teaser">
-                <!-- <p class="mui-text-caption nova">{{thisList.teaser}}</p> -->
+                <div class=" teaser">
+                <!-- <p class=" text-caption nova">{{thisList.teaser}}</p> -->
                 </div>
                 {{/if}}
 
@@ -46,35 +46,35 @@ h2.nova{
             </div>
 
         </div>
-        <div class="mui-col-sm-3"></div>
+        <div class=" col-sm-3"></div>
             </div>
-            <div class="mui-row megarow ">
-                <div class="mui-col-sm-7">
+            <div class=" row megarow ">
+                <div class=" col-sm-7">
                     <img src="{{theSlide.featuredImage}}" style="width:100%" class="featuredImage">
                     <hr>
                     {{>bottomad}}
                 </div>
-                <div class="mui-col-sm-5">
+                <div class=" col-sm-5">
 
 
-                    <div class="mui-panel thepan">
-                        <div class="mui-row">
-                        <div class="mui-col-xs-2 mui-text-center"><div class="mui-text-headline">#{{theSlide.number}}</div></div>
-                        <div class="mui-col-xs-9">
-                            <div class="mui-text-headline slide-title"> {{theSlide.title}}</div>
+                    <div class=" panel thepan">
+                        <div class=" row">
+                        <div class=" col-xs-2  text-center"><div class=" text-headline">#{{theSlide.number}}</div></div>
+                        <div class=" col-xs-9">
+                            <div class=" text-headline slide-title"> {{theSlide.title}}</div>
                             <p class="nova desc">{{theSlide.description}}</p>
                         </div>
                     </div>
                     <hr>
-                    <div class="mui-row ">
-                        <div class="mui-col-xs-6 mui-text-left">
-                        <div class="control-buttons mui-text-left">
-                            {{#if prevSlide}}<div class="mui-btn mui-btn-primary prevSlide mui-btn-raised nova"> #{{prevSlide}} <i class="fa fa-caret-left"></i>  Prev </div> {{else}}<a href="/p/gallery?id={{theSlide.parent}}&slide=1000&prod=true" class="mui-btn mui-btn-default  mui-btn-raised nova">More</a> {{/if}}
+                    <div class=" row ">
+                        <div class=" col-xs-6  text-left">
+                        <div class="control-buttons  text-left">
+                            {{#if prevSlide}}<div class=" btn  btn-primary prevSlide  btn-raised nova"> #{{prevSlide}} <i class="fa fa-caret-left"></i>  Prev </div> {{else}}<a href="/p/gallery?id={{theSlide.parent}}&slide=1000&prod=true" class=" btn  btn-default   btn-raised nova">More</a> {{/if}}
                         </div>
                         </div>
 
-                        <div class="mui-col-xs-6 mui-text-right">
-                        {{#if nextSlide}}<div class="mui-btn mui-btn-primary nextSlide mui-btn-raised nova">Next <i class="fa fa-caret-right"></i>  #{{nextSlide}}</div>{{else}}<a href="/p/gallery?id={{theSlide.parent}}&slide=1000&prod=true" class="mui-btn mui-btn-default  mui-btn-raised nova">More</a> {{/if}}
+                        <div class=" col-xs-6  text-right">
+                        {{#if nextSlide}}<div class=" btn  btn-primary nextSlide  btn-raised nova">Next <i class="fa fa-caret-right"></i>  #{{nextSlide}}</div>{{else}}<a href="/p/gallery?id={{theSlide.parent}}&slide=1000&prod=true" class=" btn  btn-default   btn-raised nova">More</a> {{/if}}
 
                         </div>
 
@@ -84,13 +84,13 @@ h2.nova{
                     <!-- <hr>
                     {{>bottomad}} -->
                 </div>
-                <div class="mui-col-sm-3">
+                <div class=" col-sm-3">
                 </div>
-                <div class="mui-col-sm-6">
+                <div class=" col-sm-6">
 
 
 
-                    <!-- <div class="mui-text-center">
+                    <!-- <div class=" text-center">
                         <div id='div-gpt-ad-1438189544118-0' style='height:250px; width:100%;'>
                             <script type='text/javascript'>
                                 googletag.cmd.push(function() {
@@ -108,25 +108,25 @@ h2.nova{
 
 
         {{else}}
-        <div class=" mui-more">
+        <div class="  more">
 
-        <div class="mui-row">
+        <div class=" row">
 
-            <div class="mui-col-sm-12">
-<h1 class="mui-text-headline mui-text-center nova">You Might Also Like</h1>
-<div class="mui-man">
+            <div class=" col-sm-12">
+<h1 class=" text-headline  text-center nova">You Might Also Like</h1>
+<div class=" man">
 
         {{#each moreLists}}
         {{#if featuredImage}}
 
 
-        <div style="position:relative;margin-bottom:10px"  class=" teasercard mui-col-sm-4">
-            <div class="mui-panel">
+        <div style="position:relative;margin-bottom:10px"  class=" teasercard  col-sm-4">
+            <div class=" panel">
             <a href="#" onclick="window.location.href='/p/gallery?id={{_id}}&slide={{slideCountMore}}{{#if production}}&prod=true{{/if}}'">    <img src="{{featuredImage.url}}"></a>
 
-                <div class="mui-text-subhead mui-text-black awesome-title nova"><a href="#" onclick="window.location.href='/p/gallery?id={{_id}}&slide={{slideCountMore}}{{#if production}}&prod=true{{/if}}'" class="mui-text-headline nova more-title">{{title}}</a></div>
+                <div class=" text-subhead  text-black awesome-title nova"><a href="#" onclick="window.location.href='/p/gallery?id={{_id}}&slide={{slideCountMore}}{{#if production}}&prod=true{{/if}}'" class=" text-headline nova more-title">{{title}}</a></div>
 
-                <p class="mui-text-caption nova">{{teaser}}</p>
+                <p class=" text-caption nova">{{teaser}}</p>
 
         </div>
 
@@ -143,10 +143,10 @@ h2.nova{
         </div>
 
         {{/if}}
-        <div class="mui-row">
-        <div class="mui-col-sm-3">
+        <div class=" row">
+        <div class=" col-sm-3">
         </div>
-        <div class="mui-col-sm-6">
+        <div class=" col-sm-6">
 <div class="bottomad">
 
 </div>
@@ -156,16 +156,16 @@ h2.nova{
 {{/if}}
 </div>
 {{#if thisList}}
-<div class="mui-text-right mui-container-fluid more">
+<div class=" text-right  container-fluid more">
     <br>
 {{#if pageViews}}
-<div class="statnum mui-text-headline nova"><i class="fa fa-bar-chart"></i> {{pageViews.pageviews}}</div>
+<div class="statnum  text-headline nova"><i class="fa fa-bar-chart"></i> {{pageViews.pageviews}}</div>
 {{/if}}
 </div>
 {{/if}}
-<div class="mui-container-fluid list-container">
-<div class="mui-text-right lystify-container">
-    <div class="mui-text-caption mui-text-white lystify nova">powered by <span class="mui-text-white mui-text-caption lystify nova" style="cursor:pointer;" onclick="window.parent.location='http://'+window.location.host+'/p/about'">LYSTIFY</span> | {{#if currentUser}}<a href="#" onclick="window.parent.location.href='/p/list?id={{thisList._id}}'">Edit</a>{{/if}}</div>
+<div class=" container-fluid list-container">
+<div class=" text-right lystify-container">
+    <div class=" text-caption  text-white lystify nova">powered by <span class=" text-white  text-caption lystify nova" style="cursor:pointer;" onclick="window.parent.location='http://'+window.location.host+'/p/about'">LYSTIFY</span> | {{#if currentUser}}<a href="#" onclick="window.parent.location.href='/p/list?id={{thisList._id}}'">Edit</a>{{/if}}</div>
 
 
 </div>
@@ -173,10 +173,10 @@ h2.nova{
     </div>
 
 <style>
-.mui-text-subhead.listtitle.nova a{
+. text-subhead.listtitle.nova a{
     color:#fff;
 }
-.mui-text-subhead.listtitle.nova {
+. text-subhead.listtitle.nova {
     text-transform: uppercase;
     padding: 13px;
     background-color: #000;
@@ -185,71 +185,71 @@ h2.nova{
     margin: -15px;
     margin-bottom: 16px;
     color: #FFF;
-}.mui-text-headline.morelists.mui-text-white {
+}. text-headline.morelists. text-white {
     margin-bottom: 14px;
     margin-top: -6px;
-}h1.mui-text-headline.nova {
+}h1. text-headline.nova {
     font-weight: lighter;
     text-transform: uppercase;
     line-height: 1;
     font-size: 3em;
     color: #5D5D5D;
-}p.mui-text-caption.nova {
+}p. text-caption.nova {
     background-color: #FFF;
     padding: 10px;
     margin-top: -22px;
     font-size: 14px;
-}h1.mui-text-headline.nova {
+}h1. text-headline.nova {
     font-weight: lighter;
     text-transform: uppercase;
     line-height: 1;
     font-size: 2em;
 
-}.mui-text-center.lystify-container .mui-text-caption {
+}. text-center.lystify-container . text-caption {
     margin-bottom: -12px;
 }
-.mui-text-center.lystify-container {
+. text-center.lystify-container {
     margin-top: 16px;
-}.nova.mui-container {
+}.nova. container {
     background-color: #000;
 }body {
     background: #000;
-}.mui-panel {
+}. panel {
     background-color: #191919;
-}.mui-text-headline.slide-title {
+}. text-headline.slide-title {
     color: #FFF;
 }p.nova.desc {
     color: #9E9E9E;
-}.mui-text-headline, h2 {
+}. text-headline, h2 {
     font-size: 2em;
     line-height: 32px;
     color: rgba(233, 231, 231, 0.87);
-}p.mui-text-caption.nova {
+}p. text-caption.nova {
     color: #959595;
-}.mui-panel {
+}. panel {
     background-color: #111;
-}.mui-more a.mui-text-headline.nova.more-title {
+}. more a. text-headline.nova.more-title {
     font-weight: inherit;
     font-size: 2em;
     margin-top: 0px;
     color: #FFF;
-}.mui-text-headline.slide-title {
+}. text-headline.slide-title {
     color: #FFF;
     font-weight: normal;
-}.mui-btn-primary {
+}. btn-primary {
     color: #FFF;
     background-color: #142C29!important;
-}h1.mui-text-headline.nova {
+}h1. text-headline.nova {
     display: none;
-}.nova.mui-container-fluid {
+}.nova. container-fluid {
     padding-top: 10px;
-}.mui-btn {
+}. btn {
     font-size: 17px;
     padding: 10px;
     height: auto;
     padding: 5px;
     width: 100%;
-}.mui-btn-primary {
+}. btn-primary {
     color: #FFF;
     background-color: #189D98!important;
 }.loadingtop {

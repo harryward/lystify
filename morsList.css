@@ -1,7 +1,7 @@
 img{
     max-width:100%;
 }
-a.mui-btn.mui-btn-danger.editThis {
+a.btn.btn-danger.editThis {
     width: 100%;
     padding: 1px;
     line-height: 1;
@@ -10,7 +10,7 @@ a.mui-btn.mui-btn-danger.editThis {
     position: relative;
     top: 11px;
 }
-a.mui-text-subhead.nova.more-title {
+a.text-subhead.nova.more-title {
     line-height: 1!important;
     display: block;
     margin-top: 10px;
@@ -1146,24 +1146,24 @@ stretchRight
 	100% {
 		-webkit-transform: scaleX(1);
 	}
-}.teasercard.mui-col-sm-6 {
+}.teasercard.col-sm-6 {
     min-width: 47%;
     max-width: 41%;
     display: inline-grid;
     float: left;
     min-height: 248px;
-}.mui-text-headline.slide-title {
+}.text-headline.slide-title {
     text-transform: uppercase;
     font-weight: bold;
     line-height: 1;
     margin-bottom: 12px;
-}.teasercard.mui-col-sm-6 {
+}.teasercard.col-sm-6 {
     min-width: 50%;
     max-width: 41%;
     display: inline-grid;
     float: left;
     min-height: 248px;
-}h1.mui-text-headline.nova {
+}h1.text-headline.nova {
     font-weight: lighter;
     text-transform: uppercase;
     line-height: 1;
@@ -1178,10 +1178,10 @@ stretchRight
 .loadingtop {
     padding: 57px;
     background-color: #EAE8E8;
-}p.mui-text-caption.nova {
+}p.text-caption.nova {
     background-color: #F5F5F5;
     padding: 10px;
-}.mui-text-headline.nova {
+}.text-headline.nova {
     text-transform: uppercase;
     font-weight: lighter;
     line-height: 1;
@@ -1191,16 +1191,16 @@ stretchRight
 }@media(mix-width:600px){
     .bottom-googlead {
     display: none;
-}.mui-col-xs-4 .mui-btn {
+}.col-xs-4 .btn {
     margin: -12px!important;
 }
-}a.mui-text-headline.nova.more-title {
+}a.text-headline.nova.more-title {
     display: block;
-}a.mui-text-headline.nova.more-title {
+}a.text-headline.nova.more-title {
     font-weight: bold;
     padding: 11px;
     margin-bottom: 10px;
-}.site.nova.mui-text-subhead {
+}.site.nova.text-subhead {
     text-transform: uppercase;
     font-weight: lighter;
 }
@@ -1210,7 +1210,7 @@ stretchRight
     margin-top: 1px;
     padding: 6%;
 }
-.mui-container.main.nav h2 {
+.container.main.nav h2 {
     background-color: #000;
     padding: 16px;
     position: fixed;
@@ -1219,9 +1219,9 @@ stretchRight
     width: 100%;
     z-index: 333;
     color: #FFF;
-}.bottomnav.mui-container {
+}.bottomnav.container {
     margin-top: 97px;
-}a.navlink.mui-pull-right {
+}a.navlink.pull-right {
     position: fixed;
     top: 22px;
     color: #FFF!important;
@@ -1231,7 +1231,7 @@ stretchRight
 h2.nova {
     padding-bottom: 7px!important;
 }
-.mui-container.main.nav h2 {
+.container.main.nav h2 {
     background-color: #000;
     padding: 16px;
     position: fixed;
@@ -1245,13 +1245,13 @@ h2.nova {
     width: 100%;
 }
 
-.mui-col-sm-6 {
+.col-sm-6 {
     padding: 0px;
-}a.mui-btn.mui-btn-default.editThis.mui-btn-raised {
+}a.btn.btn-default.editThis.btn-raised {
     margin-top: 32px!important;
     display: block;
     color: #C34B1E!important;
-}a.mui-btn.mui-btn-default.editThis.mui-btn-raised {
+}a.btn.btn-default.editThis.btn-raised {
     text-align: left;
     box-shadow: none;
 }p.nova.login a {
@@ -1274,16 +1274,16 @@ p.nova.login {
     z-index: 333434;
     top: 21px;
     left: 150px;
-}.mui-row {
+}.row {
     margin: 1px;
-}.mui-panel {
+}.panel {
     background-color: #F5F5F5;
-}p.mui-text-caption.nova {
+}p.text-caption.nova {
     background-color: rgba(255, 255, 255, 0);
     padding: 11px;
     margin-top: -17px;
     font-size: 14px;
-}a.mui-text-headline.nova.more-title {
+}a.text-headline.nova.more-title {
     font-weight: lighter;
     padding: 11px;
     margin-bottom: 10px;
@@ -1291,18 +1291,18 @@ p.nova.login {
     margin: -10px;
     margin-bottom: 15px;
     margin-top: -5px;
-}p.mui-text-caption.nova {
+}p.text-caption.nova {
     background-color: rgba(255, 255, 255, 0)!important;
     padding: 4px!important;
     font-size: 14px!important;
-}.mui-text-center.lystify-container .mui-text-caption {
+}.text-center.lystify-container .text-caption {
     margin-bottom: -12px;
 }
-.mui-text-center.lystify-container {
+.text-center.lystify-container {
     margin-top: 16px;
-}.embedkit textarea.mui-form-control.mui-not-empty {
+}.embedkit textarea.form-control.not-empty {
     font-family: monospace;
-}.bottomnav.mui-container {
+}.bottomnav.container {
     border-bottom: none!important;
     margin-bottom: 0px!important;
     padding-bottom: 0px!important;
@@ -1321,7 +1321,7 @@ display:none!important;
     width:100%;
     padding:20%;
     padding-top:1px;
-}.mui-panel a {
+}.panel a {
     text-decoration: none!important;
 }.loadingtop {
     padding: 57px;
@@ -1332,17 +1332,66 @@ display:none!important;
     background-color: #151414;
     padding: 103px;
     color: #5E5D5D;
-}.mui-more a.mui-text-headline.nova.more-title {
+}.more a.text-headline.nova.more-title {
     font-weight: inherit;
     font-size: 2em;
     margin-top: 0px;
     /*color: #FFF;*/
-}.mui-text-headline.slide-title {
+}.text-headline.slide-title {
     /*color: #FFF;*/
     font-weight: normal;
 }
-a.mui-text-headline {
+a.text-headline {
     text-transform: uppercase;
     font-weight: lighter;
     line-height: 1;
+}
+.list-group-item .pull-right {
+	margin-left: 18px;
+}.nova.btn {
+	 border-radius: 0px;
+	 margin-bottom: 10px;
+	 text-transform: uppercase;
+ }.text-headline.slide-title {
+	  font-size: 19px;
+	  margin-top: 12px;
+	  font-weight: bold!important;
+  }.text-headline {
+	   margin-top: 10px;
+	   font-size: 22px;
+   }form.newSlide {
+		padding: 22px;
+	}input, textarea {
+		 border-radius: 0px!important;
+		 background: transparent!important;
+	 }.col-sm-12.singler {
+		  padding: 38px;
+		  background: whitesmoke;
+	  }.img-container {
+		   max-height: 100px;
+		   overflow: hidden;
+		   width: 103px;
+		   float: left;
+		   margin-right: 16px;
+	   }.col-sm-12.singler {
+			padding: 10px;
+			background: whitesmoke;
+		}.panel.nova .panel {
+			 background: transparent;
+		 }
+
+.panel.nova {
+	background: black;
+	padding: 19px;
+	color: greenyellow;
+	text-transform: uppercase;
+}
+form.newList {
+	padding: 16px;
+}teasercard.col-sm-12 a {
+	 color: black;
+	 font-weight: bold!important;
+ }
+.teasercard.col-sm-12 .panel {
+	padding: 14px;
 }
